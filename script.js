@@ -36,6 +36,7 @@ const getVariance = (array) => {
 
 const getStandardDeviation = (array) => {
   const variance = getVariance(array);
+  const standardDeviation = Math.pow(variance, 1 / 2);
 };
 
 const calculate = () => {
@@ -47,7 +48,7 @@ const calculate = () => {
   const median = getMedian(numbers);
   const mode = getMode(numbers);
   const range = getRange(numbers);
-  const variance = getStandardDeviation(numbers);
+  const variance = getVariance(numbers);
 
   document.querySelector("#mean").textContent = mean;
   document.querySelector("#median").textContent = median;
